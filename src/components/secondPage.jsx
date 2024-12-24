@@ -25,7 +25,7 @@ const SecondPage = () => {
       const data = await response.json();
       setRecipes(data);
       setError("");
-      console.log(data)
+      console.log(data);
     } catch (error) {
       console.error(error);
       setError("An error occurred while fetching recipes.");
@@ -86,21 +86,10 @@ const SecondPage = () => {
         {error && <p className="text-red-500">{error}</p>}
 
         {/* Recipe Results */}
-        <Results recipes={recipes}/>
-    
-      
-</div>
-</div>
-  )
-}
-
-
-     
- 
+        <Results recipes={recipes} />
+      </div>
+    </div>
+  );
+};
 
 export default SecondPage;
-
-
-
-
-     

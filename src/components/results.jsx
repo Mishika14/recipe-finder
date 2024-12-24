@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Results = ({ recipes }) => {
- // Split ingredients based on "|"
+  // Split ingredients based on "|"
   const [expandedRecipe, setExpandedRecipe] = useState(null); // Track expanded recipe
 
   const handleCardClick = (recipe) => {
@@ -11,7 +11,7 @@ const Results = ({ recipes }) => {
   const handleClose = () => {
     setExpandedRecipe(null); // Close the expanded card
   };
- 
+
   return (
     <div>
       <div className="mt-4">
@@ -26,13 +26,17 @@ const Results = ({ recipes }) => {
                   className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer"
                 >
                   <img
-                    src="src/assets/Recipe book-pana.png"
+                    src="public\images\Recipe book-pana.png"
                     alt={recipeItem.title}
                     className="w-full h-40 object-cover"
                   />
                   <div className="p-4">
-                    <h2 className="text-xl font-semibold text-gray-800">{recipeItem.title}</h2>
-                    <p className="text-gray-600">{recipeItem.servings} servings</p>
+                    <h2 className="text-xl font-semibold text-gray-800">
+                      {recipeItem.title}
+                    </h2>
+                    <p className="text-gray-600">
+                      {recipeItem.servings} servings
+                    </p>
                   </div>
                 </div>
               ))}
@@ -47,7 +51,7 @@ const Results = ({ recipes }) => {
                 <div
                   className="bg-white rounded-lg p-8 w-3/4 max-w-4xl relative"
                   onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the card
-                  style={{ maxHeight: '80vh', overflowY: 'auto' }} // Make the modal scrollable
+                  style={{ maxHeight: "80vh", overflowY: "auto" }} // Make the modal scrollable
                 >
                   <button
                     onClick={handleClose}
@@ -56,24 +60,31 @@ const Results = ({ recipes }) => {
                     X
                   </button>
                   <img
-                    src="src/assets/Recipe book-pana.png"
+                    src="public\images\Recipe book-pana.png"
                     alt={expandedRecipe.title}
                     className="w-full h-64 object-cover rounded-lg"
                   />
-                  <h2 className="text-3xl font-semibold mt-4">{expandedRecipe.title}</h2>
-                  <p className="text-xl text-black-600 mt-2">Servings: {expandedRecipe.servings}</p>
+                  <h2 className="text-3xl font-semibold mt-4">
+                    {expandedRecipe.title}
+                  </h2>
+                  <p className="text-xl text-black-600 mt-2">
+                    Servings: {expandedRecipe.servings}
+                  </p>
                   <p className="text-xl text-black-600 mt-2">Ingredients:</p>
-                  <ul className='list-disc custom-list pl-5'>
-  {expandedRecipe.ingredients.split('|').map((ingredient, index) => (
-    <li key={index} className="text-gray-800">{ingredient.trim()}</li> // Trim to remove extra spaces
-  ))}
-</ul>
-    
+                  <ul className="list-disc custom-list pl-5">
+                    {expandedRecipe.ingredients
+                      .split("|")
+                      .map((ingredient, index) => (
+                        <li key={index} className="text-gray-800">
+                          {ingredient.trim()}
+                        </li> // Trim to remove extra spaces
+                      ))}
+                  </ul>
 
                   <p className="text-xl text-black-600 mt-2">Instructions:</p>
-                  <p className="text-gray-800 mt-2">{expandedRecipe.instructions}</p>
-
-
+                  <p className="text-gray-800 mt-2">
+                    {expandedRecipe.instructions}
+                  </p>
                 </div>
               </div>
             )}
