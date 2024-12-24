@@ -3,7 +3,7 @@ import React from "react";
 const FirstPage = () => {
   return (
     <div>
-      <div className="bg-[#fc7462] h-[100vh] w-full flex flex-col md:flex-row">
+      <div className="bg-[#2636b4] h-[100vh] w-full flex flex-col md:flex-row">
         {/* Left Section */}
         <div className="flex flex-col justify-between items-start px-5 md:px-10 py-5 md:py-10 md:w-1/2">
           <div>
