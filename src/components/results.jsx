@@ -26,7 +26,7 @@ const Results = ({ recipes }) => {
                   className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer"
                 >
                   <img
-                    src="public\images\Recipe book-pana.png"
+                    src="/images/Recipebook.png"
                     alt={recipeItem.title}
                     className="w-full h-40 object-cover"
                   />
@@ -60,7 +60,7 @@ const Results = ({ recipes }) => {
                     X
                   </button>
                   <img
-                    src="public\images\Recipe book-pana.png"
+                    src="/images/Recipebook.png"
                     alt={expandedRecipe.title}
                     className="w-full h-64 object-cover rounded-lg"
                   />

@@ -24,7 +24,7 @@ const FirstPage = () => {
         <div className="flex justify-center items-center md:items-end md:justify-around w-full md:w-1/2 mt-5 md:mt-0">
           <img
             className="rounded-md w-3/4 md:w-full lg:w-3/4"
-            src="public\images\Cooking-pana copy.png"
+            src="/images/Cookinggirl.png"
             alt="Cooking illustration"
           />
         </div>
