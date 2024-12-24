@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* In your CSS file */
+.custom-list li::marker {
+    color: #fc7462; /* Change this to the desired color */
+  }
+  
